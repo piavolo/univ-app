@@ -5,4 +5,5 @@ import "controllers"
 
 $(document).on('turbo:load', function(){
     $(".dropdown-trigger").dropdown();
+    $('.sidenav').sidenav();
 })

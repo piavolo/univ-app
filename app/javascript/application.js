@@ -7,4 +7,5 @@ $(document).on('turbo:load', function(){
     $(".dropdown-trigger").dropdown();
     $('.sidenav').sidenav();
     $('#fade-out-target').fadeOut(5000);
+    $('input[data-length], textarea[data-length]').characterCounter();
 })

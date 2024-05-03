@@ -6,12 +6,14 @@
                 <p>Email: <%= @student.email %></p>
                 <p>Course Enrollments: None</p>
             </div>
-            <div class="card-action">
-                <%= link_to edit_student_path(@student) do %>
-                    <i class="material-icons left">create</i>
-                    Edit your profile
-                <% end %>
-            </div>
+            <% if current_user == @student %>
+                <div class="card-action">
+                    <%= link_to edit_student_path(@student) do %>
+                        <i class="material-icons left">create</i>
+                        Edit your profile
+                    <% end %>
+                </div>
+            <% end %>
         </div>
         <!--<%= link_to edit_student_path(@student), class: "waves-effect waves-light btn" do %>
             <i class="material-icons left">create</i>

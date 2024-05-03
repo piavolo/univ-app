@@ -9,24 +9,28 @@
                     <%= form_with(model: @student, class: "col s12") do |f| %>
                         <div class="row">
                             <div class="input-field col s12">
+                                <i class="material-icons prefix">person_add</i>
                                 <%= f.text_field :name, autofocus: true, data: { length: 50 } %>
                                 <%= f.label :name, class: "active" %>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
+                                <i class="material-icons prefix">mail</i>
                                 <%= f.email_field :email, data: { length: 105 } %>
                                 <%= f.label :email, class: "active" %>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
+                                <i class="material-icons prefix">lock_open</i>
                                 <%= f.password_field :password %>
                                 <%= f.label :password, class: "active" %>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
+                                <i class="material-icons prefix">lock_outline</i>
                                 <%= f.password_field :password_confirmation %>
                                 <%= f.label :password_confirmation, class: "active" %>
                             </div>

@@ -12,7 +12,7 @@
           <p><%= course.description %></p>
         </div>
         <div class="card-action">
-          <a href="#">Enroll</a>
+          <%= link_to "Enroll", course_enroll_path(course_id: course.id), data: { turbo_method: :post } if logged_in? && current_user.courses.exclude?(course) %>
           <a href="#">Info</a>
         </div>
       </div>

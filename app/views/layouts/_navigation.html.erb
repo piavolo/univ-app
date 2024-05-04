@@ -1,5 +1,5 @@
 <header>
-  <ul id="dropdown1" class="dropdown-content">
+  <ul id="dropdown1" class="dropdown-content fw-6">
     <li><%= link_to "Sign up", new_student_path %></li>
     <% if logged_in? %>
       <li><%= link_to "Profile", student_path(current_user) %></li>
@@ -7,7 +7,7 @@
     <li class="divider"></li>
     <li><%= session_link %></li>
   </ul>
-  <ul id="dropdown2" class="dropdown-content">
+  <ul id="dropdown2" class="dropdown-content fw-6">
     <li><%= link_to "Sign up", new_student_path %></li>
     <% if logged_in? %>
       <li><%= link_to "Profile", student_path(current_user) %></li>
@@ -20,12 +20,12 @@
       <div class="nav-wrapper">
         <%= link_to "Tech University", root_path, class: "brand-logo right" %>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-        <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <ul id="nav-mobile" class="left hide-on-med-and-down fw-6">
           <li><%= link_to "Courses", root_path %></li>
           <li><%= link_to "Students", students_path if logged_in? %></li>
           <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Account<i class="material-icons right">arrow_drop_down</i></a></li>
         </ul>
-        <ul class="sidenav" id="mobile-demo">
+        <ul class="sidenav fw-6" id="mobile-demo">
           <li><%= link_to "Courses", root_path %></li>
           <li><%= link_to "Students", students_path if logged_in? %></li>
           <li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Account<i class="material-icons right">arrow_drop_down</i></a></li>
